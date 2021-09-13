@@ -1,15 +1,33 @@
+@media (max-width: 375px) {
+    #showcase-carousel {
+        width: 300px;
+        height: 330px;
+    }
+
+    .showcase .carousel-inner {
+        width: 148px;
+        top: 68px;
+    }
+}
+
 @media (max-width: 767px) {
 /*CSS LIDO EM DISPOSITIVOS ATÉ 767 PX DE LARGURA*/
+    .hero:first-child {
+        margin-top: 80px;
+    }
+
     .title-home h1 {
-    	font-size: 22px;
+    	font-size: 32px;
 	    margin-bottom: 5px;
-	    font-weight: 300;
-	    line-height: 22px;
+	    font-weight: 200;
+	    line-height: 32px;
 	}
 
 	.logo-cake img {
-		margin-top: 20px;
-    	margin-bottom: 14px;
+        margin-top: 18px;
+        margin-bottom: 0;
+        width: 210px;
+        min-width: 210px !important;
 	}
 
 	.navbar-right {
@@ -18,7 +36,7 @@
 	}
 
 	.title-home h3 {
-		font-size: 40px;
+		font-size: 32px;
 	    font-weight: 200;
 	    letter-spacing: 0.01em;
 	}
@@ -89,10 +107,6 @@
 	.icon-sharing {
 		font-size: 276px;
     	margin-top: 538px;
-	}
-
-	#sharing {
-		padding-bottom: 222px;
 	}
 
 	.social iframe {
@@ -184,6 +198,10 @@
 
 	.title-expertise{
 		text-align: center;
+	}
+	.service-boxes.recipe .box-services-c img {
+		height: auto;
+		width: 180px;
 	}
 
 	.box-services-d:hover .icon-expertise-2 {
@@ -662,21 +680,36 @@
     	margin-bottom: 30px;
 	}
 
+	#showcase-carousel {
+		margin: 20px auto;
+		width: 320px;
+		height: 350px;
+	}
+
+	.showcase .carousel-inner {
+		width: 165px;
+		height: 110px;
+		top: 65px;
+		left: 60px;
+	}
+
+	.cta-home {
+		text-align: center;
+	}
 }
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 768px) and (max-width: 991px) {
 /*CSS LIDO EM DISPOSITIVOS ATÉ 991 PX DE LARGURA*/
+    .hero:first-child {
+        margin-top: 90px;
+    }
+
 	.header-transparent .main-header {
 		background-color: #d33c44;
+	}
+
+	.cta-home {
+		text-align: center;
 	}
 
 	.search-form {
@@ -712,10 +745,6 @@
 	.icon-sharing {
 		    margin-top: 350px;
     font-size: 350px;
-	}
-
-	#sharing {
-		padding-bottom: 160px;
 	}
 
 	.footer-social {
@@ -771,11 +800,12 @@
 		padding: 10px 20px;
 	}
 
-	.logo-cake img {
-	    margin-top: 15px;
-	    margin-bottom: 14px;
-	}
-
+    .logo-cake img {
+        margin-top: 18px;
+        margin-bottom: 0px;
+        width: 210px;
+        min-width: 210px !important;
+    }
 	#sub {
 	    margin-top: 60px;
 	}
@@ -798,7 +828,7 @@
 	#cookbook {
 		padding-top: 50px;
 	}
-	
+
 	#slideout {
 		bottom: 0;
 	}
@@ -824,13 +854,13 @@
 	.featured-case h4 {
 		text-align: center;
 	}
-	
+
 	/* ---------------------- CALENDAR ------------------------- */
 
 	.title-calendar h1 {
 		line-height: 55px;
 	}
-	
+
 	/* ---------------------- GET INVOLVED ------------------------- */
 
 	.get-involved h2 {
@@ -849,7 +879,7 @@
 		line-height: 50px;
 	}
 
-	
+
 	/* ---------------------- TRADEMARKS ------------------------- */
 
 
@@ -892,7 +922,7 @@
 	.cake-pack-plugin {
 		margin-top: 40px;
 	}
-	
+
 	.title-plugin span {
 		color: #bdbdb5;
 	    font-size: 90px;
@@ -918,22 +948,40 @@
 		    text-align: center;
 	}
 
-	
+	.service-boxes {
+		display: flex;
+		justify-content: center;
+		align-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.service-boxes .box-services-c {
+		flex: 0 0 50%;
+		padding: 10px 60px 10px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-boxes.recipe .box-services-c img {
+		height: 100px;
+	}
+
+	.showcase .carousel-inner {
+		width: 322px;
+		height: auto;
+		top: 112px;
+		left: 113px;
+	}
 }
 
-
-
-
-
-
-
-
-
-
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px){
 /*CSS LIDO EM DISPOSITIVOS ATÉ 1199 PX DE LARGURA*/
+    .hero:first-child {
+        margin-top: 110px;
+    }
+
 	.menu > li > a {
-		padding: 25px 35px;
+		padding: 25px 20px;
 	}
 
 	.menu-fixed .menu > li > a {
@@ -968,10 +1016,6 @@
 	.icon-sharing {
     	margin-top: 144px;
     	font-size: 380px;
-	}
-
-	#sharing {
-		padding-bottom: 150px;
 	}
 
 	.fa-menu-title {
@@ -1016,18 +1060,120 @@
 		    margin-top: 30px;
 	}
 
+	.social-footer a {
+		padding: 10px 12px;
+	}
 
+
+	.service-boxes {
+		display: flex;
+		justify-content: center;
+		align-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.service-boxes .box-services-c {
+		flex: 0 0 33.333%;
+		padding: 10px 60px 10px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-boxes .box-services-c img {
+		width: 130px;
+	}
+
+	.service-boxes.recipe .box-services-c img {
+		height: 90px;
+	}
+
+	.service-boxes.recipe .box-services-c img {
+		height: 90px;
+	}
+
+	.whats-new .container > div, .sharing .container > div {
+		flex: 1 0 50%;
+	}
+
+	.whats-new .artwork, .sharing .artwork {
+		margin-right: 50px;
+	}
+
+	.whats-new .container, .sharing .container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.sharing .container {
+		align-items: center;
+	}
+
+	.sharing .artwork img {
+		max-height: 500px;
+		width: 100%;
+	}
+
+	.showcase .carousel-inner {
+		width: 235px;
+		height: auto;
+		top: 85px;
+		left: 85px;
+	}
+
+	#showcase-carousel {
+		margin: 20px 0;
+	}
 }
 
 @media (min-width: 1200px) {
   /*CSS LIDO EM DISPOSITIVOS DE MAIS DE 1200 PX DE LARGURA*/
-  .hero, .hero-2 {
-  	background-attachment: fixed;
-  }
+    .hero:first-child {
+        margin-top: 166px;
+    }
 
-  .th1-business h1 {
-  	line-height: 24px;
-  }
+	.hero {
+		margin-top: 166px;
+		position: relative;
+	}
 
-  
+	.hero .container {
+		padding: 40px;
+		min-height: 381px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.title-home {
+		padding: 0;
+		text-align: left;
+	}
+
+	.hero .artwork {
+		margin-top: -100px;
+		margin-bottom: -100px;
+	}
+
+	.cta-home {
+		margin-top: 35px;
+	}
+
+	.hero-2 {
+		background-attachment: fixed;
+	}
+
+	.th1-business h1 {
+		line-height: 24px;
+	}
+
+	.social-footer a {
+		padding: 10px 18px;
+	}
+
+	.showcase .carousel-inner {
+		width: 293px;
+		height: 185px;
+		top: 110px;
+		left: 101px;
+	}
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\View\Helper;
 
 use Cake\Core\Configure;
@@ -18,7 +19,7 @@ class MenuHelper extends Helper
      */
     public function communityItems()
     {
-		return Configure::read('Site.menu.items.community');
+        return Configure::read('Site.menu.items.community');
     }
 
     /**
@@ -28,7 +29,7 @@ class MenuHelper extends Helper
      */
     public function helpAndSupportItems()
     {
-		return Configure::read('Site.menu.items.help');
+        return Configure::read('Site.menu.items.help');
     }
 
     /**
@@ -38,7 +39,7 @@ class MenuHelper extends Helper
      */
     public function jobsItems()
     {
-		return Configure::read('Site.menu.items.jobs');
+        return Configure::read('Site.menu.items.jobs');
     }
 
     /**
@@ -48,8 +49,8 @@ class MenuHelper extends Helper
      */
     public function documentationItems()
     {
-		return Configure::read('Site.menu.items.documentation');
-	}
+        return Configure::read('Site.menu.items.documentation');
+    }
 
     /**
      * List of options related to service providers menu option
@@ -58,7 +59,7 @@ class MenuHelper extends Helper
      */
     public function serviceProvidersItems()
     {
-		return Configure::read('Site.menu.items.serviceProvider');
+        return Configure::read('Site.menu.items.serviceProvider');
     }
 
     /**
@@ -68,6 +69,6 @@ class MenuHelper extends Helper
      */
     public function calendarItems()
     {
-		return Configure::read('Site.menu.items.calendar');
+        return Configure::read('Site.menu.items.calendar');
     }
 }

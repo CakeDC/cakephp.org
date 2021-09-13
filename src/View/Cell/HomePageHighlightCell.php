@@ -1,4 +1,5 @@
 <?php
+
 namespace App\View\Cell;
 
 use Cake\View\Cell;
@@ -8,8 +9,7 @@ use Cake\View\Cell;
  */
 class HomePageHighlightCell extends Cell
 {
-
-	public $helper = ['Showcase.Showcase'];
+    public $helper = ['Showcase.Showcase'];
 
     /**
      * List of valid options that can be passed into this
@@ -26,7 +26,7 @@ class HomePageHighlightCell extends Cell
      */
     public function display()
     {
-    	$highlights = $this->loadModel('Projects')->getHighlights();
-    	$this->set('highlights', $highlights);
+        $highlights = $this->loadModel('Projects')->getHighlights();
+        $this->set('highlights', $highlights);
     }
 }

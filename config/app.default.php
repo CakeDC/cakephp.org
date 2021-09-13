@@ -1,7 +1,7 @@
 <?php
 // Hard code for now. We can't update to 3.2.0 as our
 // servers only have PHP 5.4.
-$version = '3.2.0';
+$version = '3.3.0';
 
 return [
     /**
@@ -45,8 +45,8 @@ return [
         'defaultLocale' => env('APP_DEFAULT_LOCALE', 'en_US'),
         'base' => false,
         'dir' => 'src',
-		'version' => substr($version, 0, strrpos($version, '.')),
-		'webroot' => 'webroot',
+        'version' => substr($version, 0, strrpos($version, '.')),
+        'webroot' => 'webroot',
         'wwwRoot' => WWW_ROOT,
         // 'baseUrl' => env('SCRIPT_NAME'),
         'fullBaseUrl' => false,
@@ -96,6 +96,11 @@ return [
             'className' => 'File',
             'path' => CACHE,
         ],
+        'newsletter' => [
+            'className' => 'File',
+            'path' => CACHE,
+            'duration' => '+1 hour',
+        ],
         /**
          * Configure the cache used for general framework caching.
          * Translation cache files are stored with this configuration.
@@ -123,6 +128,20 @@ return [
             'serialize' => true,
             'duration' => '+2 minutes',
             'url' => env('CACHE_CAKEMODEL_URL', null),
+        ],
+
+        /**
+         * Configure the cache for routes. The cached routes collection is built the
+         * first time the routes are processed via `config/routes.php`.
+         * Duration will be set to '+2 seconds' in bootstrap.php when debug = true
+         */
+        '_cake_routes_' => [
+            'className' => 'Cake\Cache\Engine\FileEngine',
+            'prefix' => 'myapp_cake_routes_',
+            'path' => CACHE,
+            'serialize' => true,
+            'duration' => '+1 years',
+            'url' => env('CACHE_CAKEROUTES_URL', null),
         ],
     ],
 
@@ -260,7 +279,7 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            
+
             'url' => env('DATABASE_URL', null),
         ],
 

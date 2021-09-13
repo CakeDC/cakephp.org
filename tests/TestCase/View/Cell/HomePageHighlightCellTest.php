@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Test\TestCase\View\Cell;
 
 use App\View\Cell\HomePageHighlightCell;
@@ -7,23 +8,20 @@ use Cake\TestSuite\TestCase;
 /**
  * App\View\Cell\HomePageHighlightCell Test Case
  */
-class HomePageHighlightCellTest extends TestCase
+class HomePageHighlightCellTest extends \Cake\TestSuite\TestCase
 {
-
     /**
      * Request mock
      *
      * @var \Cake\Network\Request|\PHPUnit_Framework_MockObject_MockObject
      */
     public $request;
-
     /**
      * Response mock
      *
      * @var \Cake\Network\Response|\PHPUnit_Framework_MockObject_MockObject
      */
     public $response;
-
     /**
      * Test subject
      *
@@ -39,9 +37,9 @@ class HomePageHighlightCellTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->request = $this->getMock('Cake\Network\Request');
-        $this->response = $this->getMock('Cake\Network\Response');
-        $this->HomePageHighlight = new HomePageHighlightCell($this->request, $this->response);
+        $this->request = $this->getMockBuilder(\Cake\Network\Request::class)->getMock();
+        $this->response = $this->getMockBuilder(\Cake\Network\Response::class)->getMock();
+        $this->HomePageHighlight = new \App\View\Cell\HomePageHighlightCell($this->request, $this->response);
     }
 
     /**
@@ -52,7 +50,6 @@ class HomePageHighlightCellTest extends TestCase
     public function tearDown()
     {
         unset($this->HomePageHighlight);
-
         parent::tearDown();
     }
 
